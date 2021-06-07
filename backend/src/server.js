@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const userRoute = require('./Routes/Users')
-const quizzesRoute = require('./Routes/Quizzes')
+const userRoute = require('../Routes/Users')
+const quizzesRoute = require('../Routes/Quizzes')
 
 // Hosting Frontend
 // Create a production build of the frontend and paste the files in the public folder
