@@ -1,0 +1,118 @@
+@import "../components/colors.css";
+
+.menu-bars {
+	margin-left: 1rem;
+	color: white;
+	font-size: 2rem;
+	background: none;
+}
+
+.menu-bars svg {
+	font-size: 2rem;
+}
+
+.nav-menu {
+	width: 250px;
+	height: 100vh;
+	background-color: var(--secondary);
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: -100%;
+	transition: 850ms;
+}
+
+.nav-menu.active {
+	left: 0;
+	transition: 350ms;
+}
+
+.nav-menu-items {
+	padding-left: 0px;
+	width: 100%;
+	list-style-type: none;
+}
+
+.nav-text {
+	display: flex;
+	margin-left: 0px;
+	margin-right: 15px;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 8px 0px 8px 16px;
+	list-style: none;
+	height: 60px;
+}
+
+.nav-text a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	width: 95%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	align-self: flex-start;
+	padding: 0 16px;
+	border-radius: 4px;
+}
+
+.nav-text span {
+	margin-left: 5px;
+}
+
+.nav-text button {
+	background-color: transparent;
+	color: white;
+	font-size: 18px;
+	width: 95%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	align-self: flex-start;
+	padding: 0 16px;
+	border: none;
+	border-radius: 4px;
+}
+
+.nav-text button:hover {
+	background-color: var(--accent-pink);
+	cursor: pointer;
+}
+
+.nav-text a:hover {
+	background-color: var(--accent-pink);
+}
+
+.navbar-toggle {
+	background-color: var(--secondary);
+	margin: 7px 25px;
+	text-align: start;
+}
+
+.sign-out {
+	position: absolute;
+	bottom: 0;
+	width: 90%;
+}
+
+.sign-out:hover {
+	background-color: var(--accent-pink);
+}
+
+@media (max-width: 768px) {
+	.menu-bars {
+		margin-left: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.nav-menu {
+		width: 100%;
+	}
+
+	.nav-text {
+		padding: 0 10px;
+		font-size: 12px;
+	}
+}
