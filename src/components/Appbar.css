@@ -33,8 +33,11 @@
   margin-left: 10px;
 }
 
+.home {
+  font-size: 30px;
+}
+
 .home b {
-  /* font-family: Roboto; */
   font-size: 40px;
 }
 
