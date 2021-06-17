@@ -2,9 +2,7 @@ const MongoClient = require('mongodb')
 const Evaluate = require('../Algorithms/EvaluateQuiz')
 const ObjectId = require('mongodb').ObjectId
 const API_KEY = require('../db-config').database
-
 let db
-
 const DBStart = async () => {
 	console.log('DB server connecting...')
 	const client = await MongoClient.connect(API_KEY, {
@@ -15,7 +13,6 @@ const DBStart = async () => {
 	db = client.db('quizdom-project')
 }
 DBStart()
-
 const withDB = async (operations, res) => {
 	try {
 		await operations(db)
