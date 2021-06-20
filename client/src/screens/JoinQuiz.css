@@ -1,0 +1,92 @@
+@import "../components/colors.css";
+
+#join-quiz {
+  width: 100%;
+  height: 100vh;
+}
+
+#join-quiz-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 70px; */
+  padding: 100px;
+  padding-top: 150px;
+}
+
+#q-code {
+  width: 400px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: larger;
+  border-radius: 50px;
+  transition: width 0.8s ease-in-out;
+  border: 2px solid #404A5E;
+}
+
+#q-code:focus {
+  width: 500px;
+  outline: none;
+  text-align: center;
+  font-weight: 500;
+  border-color: var(--accent-pink);
+  color: var(--secondary);
+}
+
+.join-button {
+  margin: 10px;
+  padding: 12px;
+  font-size: 20px;
+  width: 250px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  border-radius: 50px;
+  border: none;
+  background-image: var(--gradient);
+  color: var(--primary);
+  box-shadow: 0 0 20px #eee;
+}
+
+.join-button:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.logo-name {
+  font-size: 5rem;
+  font-weight: 200;
+}
+
+.logo-name b{
+  font-size: 7rem;
+  font-weight: 600;
+}
+
+.join-button:focus {
+  outline: none;
+}
+
+.join-button:active {
+  transform: translateY(4px);
+}
+
+@media (max-width: 768px) {
+  .join-button {
+    width: 200px;
+    padding: 10px;
+  }
+
+  #q-code {
+    width: 300px;
+  }
+
+  #q-code:focus {
+    width: 350px;
+  }
+}

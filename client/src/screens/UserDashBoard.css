@@ -1,0 +1,51 @@
+@import "../components/colors.css";
+
+.dash-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 80px;
+}
+.heading {
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.line-left {
+	height: 1px;
+	background-color: var(--light-shadow);
+	margin: 10px;
+	flex-grow: 1;
+	/* width: 50px; */
+}
+.line {
+	height: 1px;
+	background-color: var(--light-shadow);
+	flex-grow: 10;
+	margin: 10px;
+}
+.quizzes {
+	width: 90%;
+	/* margin: 20px; */
+}
+.card-holder {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+	.dash-body {
+		margin-top: 50px;
+	}
+	#dashboard-content {
+		flex-flow: column;
+		justify-content: center;
+	}
+	.quizzes {
+		width: 100%;
+	}
+}

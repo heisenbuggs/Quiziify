@@ -1,0 +1,17 @@
+.loading{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blue {
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.blue b {
+    font-weight: 600;
+    font-size: 7rem;
+}
