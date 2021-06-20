@@ -85,60 +85,60 @@ const AttemptQuiz = ({ match }) => {
 	// For Quiz not Found
 	if (quizTitle === 'ERR:QUIZ_NOT_FOUND')
 		return (
-			<div className='loading'>
+			<div className="loading">
 				<h1>404 Quiz Not Found!</h1>
-				<div id='logo-name'>
-					<b>Quiz</b>dom
+				<div id="logo-name">
+					<b>Quiz</b>ify
 				</div>
 				<h3>
-					Go back to <Link to='/join-quiz'>Join Quiz </Link>Page.
+					Go back to <Link to="/join-quiz">Join Quiz </Link>Page.
 				</h3>
 			</div>
 		)
 	// For Quiz not accessible
 	else if (quizTitle === 'ERR:QUIZ_ACCESS_DENIED')
 		return (
-			<div className='loading'>
+			<div className="loading">
 				<h2>
 					Quiz Access is Not Granted by the Creator. Please contact Quiz
 					Creator.
 				</h2>
-				<div id='logo-name'>
-					<b>Quiz</b>dom
+				<div id="logo-name">
+					<b>Quiz</b>ify
 				</div>
 				<h3>
-					Go back to <Link to='/join-quiz'>Join Quiz </Link>Page.
+					Go back to <Link to="/join-quiz">Join Quiz </Link>Page.
 				</h3>
 			</div>
 		)
 	else if (quizTitle === 'ERR:QUIZ_ALREADY_ATTEMPTED')
 		return (
-			<div className='loading'>
+			<div className="loading">
 				<h2>You have already taken the Quiz.</h2>
-				<div id='logo-name'>
-					<b>Quiz</b>dom
+				<div id="logo-name">
+					<b>Quiz</b>ify
 				</div>
 				<h3>
-					Go back to <Link to='/join-quiz'>Join Quiz </Link>Page.
+					Go back to <Link to="/join-quiz">Join Quiz </Link>Page.
 				</h3>
 			</div>
 		)
 	else
 		return (
-			<div id='main-body'>
-				<div id='create-quiz-body'>
-					<div className='quiz-header'>
+			<div id="main-body">
+				<div id="create-quiz-body">
+					<div className="quiz-header">
 						<h2>{quizTitle}</h2>
 					</div>
 					{questions.map((question, index) => (
-						<div className='attempQuestionCard' key={index}>
-							<div id='title'>{question.title}</div>
-							<div className='option-div'>
+						<div className="attempQuestionCard" key={index}>
+							<div id="title">{question.title}</div>
+							<div className="option-div">
 								{question.options.map((option, ind) => (
-									<div className='option' key={ind}>
+									<div className="option" key={ind}>
 										{question.optionType === 'radio' ? (
 											<input
-												type='radio'
+												type="radio"
 												name={`option${index}`}
 												onChange={(e) =>
 													handleOptionSelect(e, option.text, index)
@@ -146,14 +146,14 @@ const AttemptQuiz = ({ match }) => {
 											/>
 										) : (
 											<input
-												type='checkbox'
-												name='option'
+												type="checkbox"
+												name="option"
 												onChange={(e) =>
 													handleOptionSelect(e, option.text, index)
 												}
 											/>
 										)}
-										<label className='label' style={{ padding: '0px 5px' }}>
+										<label className="label" style={{ padding: '0px 5px' }}>
 											{option.text}
 										</label>
 									</div>
@@ -161,7 +161,7 @@ const AttemptQuiz = ({ match }) => {
 							</div>
 						</div>
 					))}
-					<button className='button wd-200' onClick={submitQuiz}>
+					<button className="button wd-200" onClick={submitQuiz}>
 						Submit
 					</button>
 					<AttemptedModal
