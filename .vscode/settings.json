@@ -3,5 +3,6 @@
     "prettier.useTabs": true,
     "prettier.semi": false,
     "javascript.preferences.quoteStyle": "single",
+    "git.ignoreLimitWarning": true,
 
 }
