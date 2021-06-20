@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb')
 const Evaluate = require('../Algorithms/EvaluateQuiz')
 const ObjectId = require('mongodb').ObjectId
-const API_KEY = require('../db-config').database
+const API_KEY = require('../../db-config').database
 let db
 const DBStart = async () => {
 	console.log('DB server connecting...')
