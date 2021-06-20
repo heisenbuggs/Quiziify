@@ -7,7 +7,7 @@ const DBStart = async () => {
 	console.log('DB server connecting...')
 	const client = await MongoClient.connect(API_KEY, {
 		useNewUrlParser: true,
-		useUnifiedTopology: true,
+		useUnifiedTopology: true
 	})
 	console.log('DB Connected Successfully.')
 	db = client.db('quizdom-project')
@@ -32,7 +32,7 @@ const createUser = async (uid, name, email, res) => {
 				name,
 				email,
 				createdQuiz: [],
-				attemptedQuiz: [],
+				attemptedQuiz: []
 			})
 			res.status(200).json({ message: 'User Created successfully.' })
 		} else {
@@ -48,12 +48,12 @@ const createQuiz = async (quiz, res) => {
 			const result = await db.collection('quizzes').insertOne(quiz)
 			res.status(200).json({
 				message: 'Quiz created successfully',
-				quizId: result.insertedId,
+				quizId: result.insertedId
 			})
 			console.log('quiz ID', result.insertedId)
 			const query = { uid: quiz.uid }
 			const addQuiz = {
-				$push: { createdQuiz: result.insertedId },
+				$push: { createdQuiz: result.insertedId }
 			}
 			await db.collection('users').updateOne(query, addQuiz)
 			console.log('Quiz Added to Creator Document: ', result.insertedId)
@@ -71,8 +71,8 @@ const submitQuiz = async (submittedQuiz, res) => {
 			const validationCursor = db.collection('users').find({
 				$and: [
 					{ uid: submittedQuiz.uid },
-					{ attemptedQuiz: ObjectId(submittedQuiz.quizId) },
-				],
+					{ attemptedQuiz: ObjectId(submittedQuiz.quizId) }
+				]
 			})
 
 			const quizData = await validationCursor.toArray()
@@ -82,7 +82,7 @@ const submitQuiz = async (submittedQuiz, res) => {
 			if (quizData[0]) {
 				console.log('in quiz already attempted')
 				return res.status(200).json({
-					error: 'ERR:QUIZ_ALREADY_ATTEMPTED',
+					error: 'ERR:QUIZ_ALREADY_ATTEMPTED'
 				})
 			}
 			const cursor = db
@@ -102,8 +102,8 @@ const submitQuiz = async (submittedQuiz, res) => {
 				{ _id: new ObjectId(submittedQuiz.quizId) },
 				{
 					$push: {
-						responses: { uid: submittedQuiz.uid, score: score },
-					},
+						responses: { uid: submittedQuiz.uid, score: score }
+					}
 				}
 			)
 			// Update user's attempted quizzes
@@ -111,8 +111,8 @@ const submitQuiz = async (submittedQuiz, res) => {
 				{ uid: submittedQuiz.uid },
 				{
 					$push: {
-						attemptedQuiz: ObjectId(submittedQuiz.quizId),
-					},
+						attemptedQuiz: ObjectId(submittedQuiz.quizId)
+					}
 				}
 			)
 		} catch (error) {
@@ -144,7 +144,7 @@ const getResponses = (obj, res) => {
 			finalResponse.push({
 				name: data.name,
 				email: data.email,
-				score: responses[index].score,
+				score: responses[index].score
 			})
 		})
 		res.status(200).json({ finalResponse })

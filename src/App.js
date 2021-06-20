@@ -49,7 +49,7 @@ const App = () => {
 	}, [user])
 
 	return (
-		<div className="App">
+		<div className='App'>
 			{!firebase.auth().currentUser ? (
 				<Home setUser={setUser} />
 			) : (
@@ -58,28 +58,28 @@ const App = () => {
 						<Appbar user={user} setUser={setUser} />
 					</div>
 					<Switch>
-						<Route exact path="/">
+						<Route exact path='/'>
 							<OneTimeDashBoard user={user} />
 						</Route>
-						<Route path="/dashboard">
+						<Route path='/dashboard'>
 							<UserDashboard user={user} />
 						</Route>
-						<Route path="/create-quiz">
+						<Route path='/create-quiz'>
 							<CreateQuiz user={user} />
 						</Route>
 						<Route
-							path="/created-succesfully/:quizCode"
+							path='/created-succesfully/:quizCode'
 							component={CreatedSuccesfully}
 						/>
-						<Route path="/join-quiz">
+						<Route path='/join-quiz'>
 							<JoinQuiz user={user} />
 						</Route>
-						<Route path="/attempt-quiz/:quizCode" component={AttemptQuiz} />
+						<Route path='/attempt-quiz/:quizCode' component={AttemptQuiz} />
 						<Route
-							path="/attempt-blind-quiz/:quizCode"
+							path='/attempt-blind-quiz/:quizCode'
 							component={AttemptBlindQuiz}
 						/>
-						<Route path="/responses/:quizCode" component={Responses} />
+						<Route path='/responses/:quizCode' component={Responses} />
 						<Route component={NotFoundPage} />
 					</Switch>
 				</>

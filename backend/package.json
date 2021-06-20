@@ -1,8 +1,8 @@
 {
-  "name": "quizify-backend",
+  "name": "quizdom-backend",
   "version": "1.0.0",
-  "description": "Backend Quizify",
-  "main": "index.js",
+  "description": "",
+  "main": "back.js",
   "scripts": {
     "start": "nodemon src/server",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mongodb": "^3.6.9",
+    "mongodb": "^3.6.3"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.7"
   }
 }
