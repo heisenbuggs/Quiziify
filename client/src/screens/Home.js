@@ -47,7 +47,7 @@ const Home = ({ setUser }) => {
 					<Row className="row">
 						<Col className="logo" lg={6}>
 							<Col className="logo-name">
-								<b>Quiz</b>ify
+								<b>Quiz</b>iify
 							</Col>
 							<Col className="description">
 								Create and Join Quiz at a single platform. You can create

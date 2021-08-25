@@ -12,7 +12,7 @@ const Appbar = ({ user, setUser }) => {
 				<Col className="slider">
 					<Sidebar />
 					<Link to="/" className="home">
-						<b>Quiz</b>ify
+						<b>Quiz</b>iify
 					</Link>
 				</Col>
 				<Col className="appbar-user">

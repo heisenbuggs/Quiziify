@@ -20,7 +20,7 @@ const JoinQuiz = () => {
 		<div id='join-quiz'>
 			<div id='join-quiz-div'>
 				<div className='logo-name'>
-					<b>Quiz</b>ify
+					<b>Quiz</b>iify
 				</div>
 				<input
 					value={code}

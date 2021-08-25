@@ -6,7 +6,7 @@ const NotFoundPage = () => {
 		<div className="loading">
 			<h1>404 Page Not Found!</h1>
 			<div id="logo-name">
-				<b>Quiz</b>ify
+				<b>Quiz</b>iify
 			</div>
 			<h3>
 				Who told you to mess up with the URL? <Link to="/">Click here</Link> and

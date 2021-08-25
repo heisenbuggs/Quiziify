@@ -195,8 +195,7 @@ const AttemptBlindQuiz = ({ match }) => {
 						else if (option === 'to') option = 2
 						console.log('option :' + option)
 						speak(
-							`You chose option ${option} : ${
-								questions[currentIndex].options[option - 1].text
+							`You chose option ${option} : ${questions[currentIndex].options[option - 1].text
 							}`
 						)
 						selectOption(questions[currentIndex].options[option - 1].text)
@@ -312,7 +311,7 @@ const AttemptBlindQuiz = ({ match }) => {
 			<div className='loading'>
 				<h1>404 Quiz Not Found!</h1>
 				<div id='logo-name'>
-					<b>Quiz</b>dom
+					<b>Quiz</b>iify
 				</div>
 				<h3>
 					Go back to <Link to='/join-quiz'>Join Quiz </Link>Page.
@@ -330,7 +329,7 @@ const AttemptBlindQuiz = ({ match }) => {
 					Creator.
 				</h2>
 				<div id='logo-name'>
-					<b>Quiz</b>dom
+					<b>Quiz</b>iify
 				</div>
 				<h3>
 					Go back to <Link to='/join-quiz'>Join Quiz </Link>Page.
@@ -343,7 +342,7 @@ const AttemptBlindQuiz = ({ match }) => {
 			<div className='loading'>
 				<h2>You have already taken the Quiz.</h2>
 				<div id='logo-name'>
-					<b>Quiz</b>dom
+					<b>Quiz</b>iify
 				</div>
 				<h3>
 					Go back to <Link to='/join-quiz'>Join Quiz </Link>Page.
@@ -370,8 +369,8 @@ const AttemptBlindQuiz = ({ match }) => {
 												checked={
 													attemptedQuestions.length
 														? attemptedQuestions[
-																index
-														  ].selectedOptions.includes(option.text)
+															index
+														].selectedOptions.includes(option.text)
 														: false
 												}
 												onChange={(e) =>
@@ -385,8 +384,8 @@ const AttemptBlindQuiz = ({ match }) => {
 												checked={
 													attemptedQuestions.length
 														? attemptedQuestions[
-																index
-														  ].selectedOptions.includes(option.text)
+															index
+														].selectedOptions.includes(option.text)
 														: false
 												}
 												onChange={(e) =>
