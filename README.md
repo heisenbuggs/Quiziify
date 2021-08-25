@@ -44,6 +44,7 @@ QUIZIIFY is a web application for all kinds of users. Users can simply log in to
 - Open a terminal with the path set to the root directory of the project and run `npm install` command to install the required packages.
 - Open a new terminal with the path set to the backend directory of the project and run `npm install` command to install the required packages.
 - After successful installation of all packages, run command `npm start` in the terminal with the path set to the root directory and wait for the project to initiate.
+- Deployment to Heroku is done manually with heroku commands.
 
 ## Supported Environments
 
