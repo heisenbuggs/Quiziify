@@ -1,0 +1,143 @@
+@import '../components/colors.css';
+
+.Home {
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary);
+	padding: 30px;
+}
+
+.row {
+	justify-content: space-between;
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.logo {
+	margin: 10px 7%;
+}
+
+.logo-name {
+	color: var(--secondary);
+	font-size: 4rem !important;
+	text-align: center;
+	font-weight: 200;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.logo-name b {
+	font-size: 7rem;
+	font-weight: 600;
+}
+
+.description {
+	font-size: 1.5rem;
+	color: var(--secondary);
+	font-weight: 350;
+	max-width: 550px;
+	text-align: left;
+	margin-left: 10px;
+}
+
+.login-card {
+	margin: 50px 5%;
+	background-color: var(--secondary);
+	align-items: center;
+	width: 400px;
+	transition: 0.3s;
+	border-radius: 20px;
+	padding-top: 60px;
+	padding-bottom: 80px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.login-card:hover {
+	box-shadow: 0 8px 16px 0 rgba(129, 89, 89, 1);
+}
+
+.login-card .login-label {
+	padding: 30px;
+	padding-bottom: 50px;
+	color: var(--primary);
+	font-size: 100px;
+}
+
+.signIn-btn {
+	margin: 10px;
+	padding: 12px;
+	font-size: 20px;
+	width: 250px;
+	transition: 0.5s;
+	background-size: 200% auto;
+	border-radius: 50px;
+	border: none;
+	background-image: linear-gradient(to right,
+			var(--secondary) -30%,
+			var(--accent-pink) 30%,
+			var(--accent-mustard) 100%);
+	color: var(--primary);
+}
+
+.signIn-btn:hover {
+	background-position: right center;
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.signIn-btn:focus {
+	outline: none;
+}
+
+#firebaseui_container {
+	width: 100%;
+}
+
+/* @media (max-width: 900px) {
+	#Home {
+		flex-flow: column;
+	}
+
+	#logo-name {
+		font-size: 3rem;
+		margin: 10px;
+	}
+
+	#description {
+		color: var(--secondary);
+		font-weight: 400;
+		font-size: 1.2rem;
+		width: 300px;
+		text-align: left;
+		margin-left: 50px;
+	}
+
+	#login-card {
+		width: 300px;
+		margin: 15px;
+	}
+
+	.signIn-btn {
+		width: 200px;
+		font-size: 1.01rem;
+	}
+}
+
+@media (max-width: 380px) {
+	#logo {
+		font-size: 3.5rem;
+		margin: 2 0px;
+	}
+
+	#login-card {
+		width: 300px;
+	}
+
+	.signIn-btn {
+		width: 200px;
+		font-size: 1.01rem;
+	}
+} */

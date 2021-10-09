@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb')
-const Evaluate = require('../Algorithms/EvaluateQuiz')
+const Evaluate = require('../utils/EvaluateQuiz')
 const ObjectId = require('mongodb').ObjectId
 const API_KEY = require('../../db-config').database
 let db
